@@ -13,7 +13,22 @@ for (int i = 0; i < a; i++)
 }
 }
 
+void RestartArray(string [] array2, string [] array1)
+{
+for (int i = 0; i < array2.Length; i++)
+{
+   array2 [i] = array1 [new Random().Next(0,array1.Length)];
+}
+}
 
+void PrintArray(string [] array)
+{
+foreach (string i in array)
+{
+    Console.Write($"{i} ");
+}
+}
 
 FullArray(array1);
-
+RestartArray(array2, array1);
+PrintArray(array2);
