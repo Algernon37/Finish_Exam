@@ -31,4 +31,5 @@ foreach (string i in array)
 
 FullArray(array1);
 RestartArray(array2, array1);
+Console.WriteLine();
 PrintArray(array2);
