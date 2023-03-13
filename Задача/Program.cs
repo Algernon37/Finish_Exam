@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Сколько эллементов в массиве будет?");
 int a = Convert.ToInt32(Console.ReadLine());
 string[] array1 = new string[a];
-string[] array2 = new string[new Random().Next(0,4)];
+string[] array2 = new string[a];
 
 void FullArray(string [] array)
 {
@@ -15,9 +15,12 @@ for (int i = 0; i < a; i++)
 
 void RestartArray(string [] array2, string [] array1)
 {
-for (int i = 0; i < array2.Length; i++)
+for (int i = 0; i < array1.Length; i++)
 {
-   array2 [i] = array1 [new Random().Next(0,array1.Length)];
+    if(array1[i].Length <= 3)
+    {
+        array2 [i] = array1[i];
+    }
 }
 }
 
